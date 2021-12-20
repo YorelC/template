@@ -1,0 +1,21 @@
+version: "2"
+services:
+  <project_name>:
+    image: "${APP}:${WEBSERVICE}-${WEBSERVICE_VERSION}"
+    container_name: "${APP}-${WEBSERVICE}"
+
+    ports:
+     - "5000:5000"
+
+    volumes:
+     - ../../src/backend/webservice/package.json:/code/package.json
+     - ../../src/backend/webservice/index.js:/code/index.js
+     - ../../src/backend/webservice/src:/code/src/
+
+    networks: 
+      - "network_${APP}"
+
+networks:
+  network_<project_name>:
+    external:
+      name: "mongodb_network_${APP}"

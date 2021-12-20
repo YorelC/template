@@ -1,0 +1,35 @@
+version: "2"
+
+services:
+  <project_name>:
+    image: "${APP}:${BUILDER}-${BUILDER_VERSION}"
+    container_name: "${APP}-${BUILDER}"
+
+    volumes:
+     - ../../src/frontend/src:/code/src
+     - ../../src/frontend/build:/code/build
+     - ../../src/frontend/webpack.config.js:/code/webpack.config.js
+     - ../../src/frontend/package.json:/code/package.json
+     - ../../src/frontend/.babel.rc:/code/.babel.rc
+
+    command: /bin/sh -c "npm run build"
+
+
+  <project_name>_debug:
+    image: "${APP}:${BUILDER}-${BUILDER_VERSION}"
+    container_name: "${APP}-${BUILDER}-debug"
+    stdin_open : true
+    tty: true
+
+    ports:
+     - "3000:3000"
+    
+    entrypoint: /bin/sh
+    command: -s 
+    
+    volumes:
+     - ../../src/frontend/src:/code/src
+     - ../../src/frontend/build:/code/build
+     - ../../src/frontend/webpack.config.js:/code/webpack.config.js
+     - ../../src/frontend/package.json:/code/package.json
+     - ../../src/frontend/.babel.rc:/code/.babel.rc

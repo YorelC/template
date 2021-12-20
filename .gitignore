@@ -1,0 +1,5 @@
+docker/mongodb/data/db
+src/frontend/build
+src/frontend/src/secret_key.js
+**/npm-debug.log
+**/node_modules/

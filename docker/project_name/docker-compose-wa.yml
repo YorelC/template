@@ -1,0 +1,13 @@
+version: "2"
+services:
+  <project_name>:
+    image: "${APP}:${WEBAPP}-${WEBAPP_VERSION}"
+    container_name: "${APP}-${WEBAPP}"
+
+    ports:
+     - "3001:3000"
+
+    volumes:
+     - ../../src/backend/webapp/package.json:/code/package.json
+     - ../../src/backend/webapp/index.js:/code/index.js
+     - ../../src/frontend/build:/code/build

@@ -1,0 +1,54 @@
+version: "2"
+services:
+  mongodb:
+    image: mongo
+      
+    ports:
+     - "27017:27017"
+
+    container_name: project_name-mongodb
+
+    environment:
+    - MONGO_INITDB_ROOT_USERNAME=admin
+    - MONGO_INITDB_ROOT_PASSWORD=UN_PASS_WORD_TO_FUFU
+    - MONGO_INITDB_DATABASE=project_name
+
+    entrypoint: /bin/sh
+    command: -c "chown mongodb:mongodb -R /data && /usr/local/bin/docker-entrypoint.sh mongod"
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./data/configdb:/data/configdb
+      - ./data/db:/data/db
+      - ./data/json_db:/data/json_db
+
+    networks: 
+      network_project_name:
+        ipv4_address: 172.27.0.1
+  
+  
+  mongodb_debug:
+    image: mongo
+
+    stdin_open: true
+    tty: true
+    
+    entrypoint: /bin/sh
+    command: -s 
+    #command: -c "chown mongodb:mongodb -R /data"
+    ports:
+     - "27017:27017"
+
+    volumes:
+    #  - ./data:/data/
+     - ./data/configdb:/data/configdb
+     - ./data/db:/data/db
+     - ./data/json_db:/data/json_db
+
+networks: 
+  network_project_name:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.27.0.0/24
+          gateway: 172.27.0.2

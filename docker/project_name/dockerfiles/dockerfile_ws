@@ -1,0 +1,13 @@
+FROM node:12.13.1-alpine3.9
+
+WORKDIR /code
+
+COPY ./src/backend/webservice/package.json /code/
+
+RUN npm install --only=production
+
+VOLUME ["/code"]
+
+EXPOSE 5000
+
+CMD ["npm", "run" , "start"]

@@ -1,0 +1,23 @@
+{
+    "name": "project_name",
+    "version": "1.0.0",
+    "description": "## Documentation for install project",
+    "directories": {
+      "doc": "docs"
+    },
+    "scripts": {
+      "start": "make build-container && make up"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/YorelC/project_name.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/YorelC/project_name/issues"
+    },
+    "homepage": "https://github.com/YorelC/project_name#readme"
+  }
+  
