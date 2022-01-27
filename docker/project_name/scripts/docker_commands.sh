@@ -69,11 +69,11 @@ function up() {
 }
 
 function up_wa() {
-    up ${dc_wa} ${WEBAPP}
+    up ${dc_wa} ${APP}
 }
 
 function up_ws() {
-    up ${dc_ws} ${WEBSERVICE}
+    up ${dc_ws} ${APP}
 }
 
 function up_debug_front_bundle( ) {
