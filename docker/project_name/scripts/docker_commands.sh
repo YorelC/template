@@ -30,6 +30,7 @@ function test() {
     echo "WEBAPP_VERSION : ${WEBAPP_VERSION}"
     echo "WEBSERVICE : ${WEBSERVICE}"
     echo "WEBSERVICE_VERSION : ${WEBSERVICE_VERSION}"
+    echo "DC_BUILDER : ${DC_BUILDER}"
     echo "DC_WEBAPP : ${DC_WEBAPP}"
     echo "DC_WEBSERVICE : ${DC_WEBSERVICE}"
 }
@@ -46,7 +47,9 @@ function build_builder_front() {
 }
 
 function build_front_bundle( ) {
-   docker-compose -f ./${dc_builder} run -u $USERID --service-ports --rm ${APP}
+    echo "${dc_builder}"
+    echo "${APP}"
+    docker-compose -f ./${dc_builder} run -u $USERID --service-ports --rm ${APP}
 }
 
 function build_wa() {
