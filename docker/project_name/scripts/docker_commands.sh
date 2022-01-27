@@ -14,7 +14,7 @@ USERID=$(id -u)
 
 tag_builder="${APP}:${BUILDER}-${BUILDER_VERSION}"
 tag_wa="${APP}:${WEBAPP}-${WEBAPP_VERSION}"
-tag_ws="${APP}:${WEBSERVICE}-${WESERVICE_VERSION}"
+tag_ws="${APP}:${WEBSERVICE}-${WEBSERVICE_VERSION}"
 
 dc_builder=${DC_BUILDEUR}
 dc_wa=${DC_WEBAPP}

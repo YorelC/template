@@ -6,8 +6,8 @@ reference=
 shell_executor=bash
 
 up:
-	$(shell_executor) ./scripts/docker_commands_script.sh start
+	$(shell_executor) ./scripts/docker_commands.sh start
 
 down:
-	$(shell_executor) ./scripts/docker_commands_script.sh stop
+	$(shell_executor) ./scripts/docker_commands.sh stop
 
