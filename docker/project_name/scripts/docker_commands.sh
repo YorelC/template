@@ -16,7 +16,7 @@ tag_builder="${APP}:${BUILDER}-${BUILDER_VERSION}"
 tag_wa="${APP}:${WEBAPP}-${WEBAPP_VERSION}"
 tag_ws="${APP}:${WEBSERVICE}-${WEBSERVICE_VERSION}"
 
-dc_builder=${DC_BUILDEUR}
+dc_builder=${DC_BUILDER}
 dc_wa=${DC_WEBAPP}
 dc_ws=${DC_WEBSERVICE}
 
