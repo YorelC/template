@@ -1,5 +1,5 @@
 # user configuration
-project=<project_name>
+project=project_name
 
 test:
 	${MAKE} -C ./docker/${project} test

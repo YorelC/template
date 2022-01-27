@@ -6,7 +6,7 @@ services:
     ports:
      - "27017:27017"
 
-    container_name: <projet>-mongodb
+    container_name: project_name-mongodb
 
     environment:
     - MONGO_INITDB_ROOT_USERNAME=${USER_NAME}
@@ -23,7 +23,7 @@ services:
       - ./data/json_db:/data/json_db
 
     networks: 
-      network_<projet>:
+      network_project_name:
         ipv4_address: 172.27.0.1
   
   
@@ -46,7 +46,7 @@ services:
      - ./data/json_db:/data/json_db
 
 networks: 
-  network_<projet>:
+  network_project_name:
     driver: bridge
     ipam:
       driver: default
