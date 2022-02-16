@@ -1,6 +1,6 @@
 version: "2"
 services:
-  project_name:
+  myproject:
     image: "${APP}:${WEBSERVICE}-${WEBSERVICE_VERSION}"
     container_name: "${APP}-${WEBSERVICE}"
 
@@ -10,12 +10,15 @@ services:
     volumes:
      - ../../src/backend/webservice/package.json:/code/package.json
      - ../../src/backend/webservice/index.js:/code/index.js
-     - ../../src/backend/webservice/src:/code/src/
+     - ../../src/backend/webservice/routes:/code/routes/
+     - ../../src/backend/webservice/controllers:/code/controllers/
+     - ../../src/backend/webservice/services:/code/services/
+     - ../../src/backend/webservice/models:/code/models/
 
-    networks: 
+    networks:
       - "network_${APP}"
 
 networks:
-  network_project_name:
+  network_myproject:
     external:
       name: "mongodb_network_${APP}"

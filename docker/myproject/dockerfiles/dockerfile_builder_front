@@ -6,6 +6,9 @@ COPY ./src/frontend/package.json /code
 COPY ./src/frontend/webpack.config.js /code
 COPY ./src/frontend/.babelrc /code
 
+RUN npm i -g npm-check-updates
+RUN ncu -u
+
 RUN npm install
 RUN npm audit fix
 

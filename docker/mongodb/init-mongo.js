@@ -1,7 +1,9 @@
 db.createUser(
+  // TODO Apply env var for user and password
   {
-    user: "admin",
-    pwd: "UN_PASS_WORD_TO_FUFU",
-    roles: [ { role: "root", db: "admin" } ]
+    user: "myproject",
+    pwd: "1234",
+    roles: [ { role: "readWrite", db: "myproject" } ]
   }
 );
+

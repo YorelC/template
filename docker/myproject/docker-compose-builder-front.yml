@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-  project_name:
+  myproject:
     image: "${APP}:${BUILDER}-${BUILDER_VERSION}"
     container_name: "${APP}-${BUILDER}"
 
@@ -15,7 +15,7 @@ services:
     command: /bin/sh -c "npm run build"
 
 
-  project_name_debug:
+  myproject_debug:
     image: "${APP}:${BUILDER}-${BUILDER_VERSION}"
     container_name: "${APP}-${BUILDER}-debug"
     stdin_open : true

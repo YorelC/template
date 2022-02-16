@@ -1,5 +1,5 @@
 # user configuration
-project=project_name
+project=myproject
 
 test:
 	${MAKE} -C ./docker/${project} test
@@ -47,11 +47,11 @@ up_wa:
 up_ws:
 	${MAKE} -C ./docker/${project} up_ws
 
-up_bdd:
-	${MAKE} -C ./docker/${project} up_bdd
-
 up_debug_front_bundle:
 	${MAKE} -C ./docker/${project} up_debug_front_bundle
+
+up_bdd:
+	${MAKE} -C ./docker/mongodb up
 
 
 ################
@@ -68,3 +68,6 @@ down_wa:
 
 down_ws:
 	${MAKE} -C ./docker/${project} down_ws
+
+down_bdd:
+	${MAKE} -C ./docker/mongodb down

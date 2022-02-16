@@ -4,6 +4,9 @@ WORKDIR /code
 
 COPY ./src/backend/webapp/package.json /code/
 
+RUN npm i -g npm-check-updates
+RUN ncu -u
+
 RUN npm install --only=production
 
 VOLUME ["/code"]

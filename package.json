@@ -1,5 +1,5 @@
 {
-    "name": "project_name",
+    "name": "myproject",
     "version": "1.0.0",
     "description": "## Documentation for install project",
     "directories": {
@@ -10,14 +10,14 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/YorelC/project_name.git"
+      "url": "git+https://github.com/YorelC/myproject.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/YorelC/project_name/issues"
+      "url": "https://github.com/YorelC/myproject/issues"
     },
-    "homepage": "https://github.com/YorelC/project_name#readme"
+    "homepage": "https://github.com/YorelC/myproject#readme"
   }
   

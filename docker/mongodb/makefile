@@ -6,4 +6,3 @@ up:
 
 down:
 	$(shell_executor) ./scripts/docker_commands.sh stop
-

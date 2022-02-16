@@ -1,0 +1,46 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open --mode development --progress",
+    "build": "babel-node ./node_modules/webpack/bin/webpack --mode production --progress"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.5",
+    "@babel/node": "7.16.5",
+    "@babel/preset-env": "7.16.5",
+    "@babel/preset-react": "7.16.5",
+    "@babel/plugin-proposal-class-properties": "7.16.5",
+    "@babel/plugin-transform-runtime": "7.16.5",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-import": "1.13.3",
+    "bulma": "0.9.3",
+    "css-loader": "^6.5.1",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "2.4.5",
+    "node-sass": "4.13.1",
+    "path": "0.12.7",
+    "sass": "1.26.11",
+    "sass-loader": "12.4.0",
+    "style-loader": "3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "dependencies": {
+      "axios": "^0.24.0",
+      "crypto-js": "4.0.0",
+      "html-loader": "^3.0.1",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-redux": "^7.2.6",
+      "react-router-dom": "^6.2.1",
+      "react-hook-form": "7.22.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

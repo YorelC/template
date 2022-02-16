@@ -3,8 +3,7 @@
 ##!/usr/bin/env bash
 
 #Donne le nom du dossier qui fait appel a ce script
-COMPONENT_NAME=${PWD##*/}   
-USERID=$(id -u)
+COMPONENT_NAME=${PWD##*/}
 
 file_runtime="docker-compose.yml"
 
