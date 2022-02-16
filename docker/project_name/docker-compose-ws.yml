@@ -1,6 +1,6 @@
 version: "2"
 services:
-  <project_name>:
+  project_name:
     image: "${APP}:${WEBSERVICE}-${WEBSERVICE_VERSION}"
     container_name: "${APP}-${WEBSERVICE}"
 
@@ -16,6 +16,6 @@ services:
       - "network_${APP}"
 
 networks:
-  network_<project_name>:
+  network_project_name:
     external:
       name: "mongodb_network_${APP}"

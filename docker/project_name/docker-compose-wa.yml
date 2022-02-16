@@ -1,6 +1,6 @@
 version: "2"
 services:
-  <project_name>:
+  project_name:
     image: "${APP}:${WEBAPP}-${WEBAPP_VERSION}"
     container_name: "${APP}-${WEBAPP}"
 
